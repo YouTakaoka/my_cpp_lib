@@ -8,9 +8,7 @@ clean:
 	rm a.out
 
 run2: a2.out
-	./a2.out < input1.txt
-	./a2.out < input2.txt
-	./a2.out < input3.txt
+	cat input.txt | ./exec.sh ./a2.out
 
 a2.out: Main2.cpp
 	g++ -std=gnu++1y -O0 -I/opt/boost/gcc/include -L/opt/boost/gcc/lib -o a2.out Main2.cpp
