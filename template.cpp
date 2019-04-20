@@ -20,6 +20,20 @@ ll pow(int x, int n){
   return n == 0 ? 1 : x * pow(x, n - 1);
 }
 
+void Yn(bool f)
+{
+  cout << (f ? "Yes" : "No") << endl;
+}
+
+void yn(bool f)
+{
+  cout << (f ? "yes" : "no") << endl;
+}
+
+void YN(bool f)
+{
+  cout << (f ? "YES" : "NO") << endl;
+}
 
 /*
 

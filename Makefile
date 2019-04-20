@@ -7,6 +7,10 @@ a.out: Main.cpp
 clean:
 	rm a.out
 
+reset:
+	cat template.cpp > Main.cpp
+	echo "" > input.txt
+
 run2: a2.out
 	cat input.txt | ./exec.sh ./a2.out
 
@@ -16,4 +20,6 @@ a2.out: Main2.cpp
 clean2:
 	rm a2.out
 
-
+reset2:
+	cat template.cpp > Main2.cpp
+	echo "" > input.txt
