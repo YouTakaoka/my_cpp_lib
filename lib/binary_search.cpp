@@ -20,23 +20,37 @@ ll pow(int x, int n){
   return n == 0 ? 1 : x * pow(x, n - 1);
 }
 
-void Yn(bool f)
-{
-  cout << (f ? "Yes" : "No") << endl;
+vector<int> a = {2, 3, 5, 7, 11, 13, 17};
+int b = 11;
+
+bool C(int x){
+  return x > b;
 }
 
-void yn(bool f)
-{
-  cout << (f ? "yes" : "no") << endl;
-}
+bool bsearch(){
+  int left = 0;
+  int right = a.size();
 
-void YN(bool f)
-{
-  cout << (f ? "YES" : "NO") << endl;
+  while(right - left > 1) {
+    int mid = (left + right) / 2;
+    if (C(a[mid]))
+    {
+      right = mid;
+    } else {
+      left = mid;
+    }
+  }
+  return a[left] == b;
 }
 
 int main(){
-  
+  b = 12;
+
+  if(bsearch()) {
+    cout << "a contains " << b << endl;
+  } else {
+    cout << "a does not contain " << b << endl;
+  }
 
   return 0;
 }
